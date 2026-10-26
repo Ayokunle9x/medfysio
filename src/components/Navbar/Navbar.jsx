@@ -1,6 +1,8 @@
 import "./Navbar.css";
 import PhoneIcon from "../../assets/phone.svg";
-import sitelogo from "../assets/sitelogo.png";
+import SiteLogo from "../../assets/logo.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
   return (
@@ -19,23 +21,26 @@ const NavBar = () => {
       </div>
       <div className="navigation">
         <div className="navigation__logo">
-          <img src={sitelogo} alt="Medfysio Logo" />
+          <img src={SiteLogo} alt="Medfysio Logo" />
         </div>
         <div className="navigation__links">
-          <a href="#" className="navigation__link">
-            Home
-          </a>
-          <a href="#" className="navigation__link">
-            About
-          </a>
-          <a href="#" className="navigation__link">
-            Services
-          </a>
-          <a href="#" className="navigation__link">
-            Contact
-          </a>
+          <ul className="navigation__links-list">
+            <li className="navigation__links-item">
+              <a href="#">Home</a>
+            </li>
+            <li className="navigation__links-item">
+              <a href="#">About</a>
+            </li>
+            <li className="navigation__links-item">
+              <a href="#">Solution</a>
+            </li>
+            <li className="navigation__links-item">
+              <a href="#">Services</a>
+            </li>
+          </ul>
         </div>
         <div className="navigation__cta">
+          <FontAwesomeIcon icon={faSearch} className="navigation__cta-search-icon" />
           <input
             className="navigation__cta-search"
             placeholder="Search..."
