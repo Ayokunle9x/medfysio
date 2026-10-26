@@ -1,5 +1,6 @@
 import "./Navbar.css";
 import PhoneIcon from "../../assets/phone.svg";
+import sitelogo from "../assets/sitelogo.png";
 
 const NavBar = () => {
   return (
@@ -17,7 +18,9 @@ const NavBar = () => {
         </div>
       </div>
       <div className="navigation">
-        <div className="navigation__logo">Medfysio</div>
+        <div className="navigation__logo">
+          <img src={sitelogo} alt="Medfysio Logo" />
+        </div>
         <div className="navigation__links">
           <a href="#" className="navigation__link">
             Home
