@@ -1,13 +1,80 @@
+:root {
+  font-family: "Lato", "Aptos", "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  --font-body: "Lato", "Aptos", "Segoe UI", sans-serif;
+  --font-display: "Lato", "Aptos", "Segoe UI", sans-serif;
+  --color-green: #339657;
+  --color-green-dark: #226b3d;
+  --color-green-pale: #e8f4e9;
+  --color-yellow: #e9c66c;
+  --color-ink: #1c2820;
+  --color-muted: #68756c;
+  --color-paper: #f5f7f4;
+
+  color: var(--color-ink);
+  background: #fff;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  min-width: 320px;
+  margin: 0;
+  font-family: var(--font-body);
   font-weight: 400;
   font-style: normal;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #e8b648;
+  outline-offset: 4px;
+}
+
+::selection {
+  color: #fff;
+  background: var(--color-green-dark);
+}
+
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
